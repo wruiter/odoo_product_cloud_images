@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  COPYRIGHT
+     Copyright (C) 2020 Omega Software Service (walru@hotmail.com)
+-->
+
+<odoo>
+    <record id="product_template_form_view_inherit_img" model="ir.ui.view">
+        <field name="name">product.template.form.view.inherit.img</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <page name="notes" position="after">
+                <page string="Cloud Afbeeldingen" name="Cloud Afbeeldingen">
+                    <field name="image_ids"/>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

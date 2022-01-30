@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  COPYRIGHT
+     Copyright (C) 2020 Omega Software Service (walru@hotmail.com)
+-->
+
+<odoo>
+        <record id="product_images_tree_view" model="ir.ui.view">
+            <field name="name">product.images.tree</field>
+            <field name="model">product.images</field>
+            <field name="arch" type="xml">
+                <tree string="Product Images">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="url"/>
+                </tree>
+            </field>
+        </record>
+
+    <record id="product_images_form_view" model="ir.ui.view">
+        <field name="name">product.images.form</field>
+        <field name="model">product.images</field>
+        <field name="arch" type="xml">
+            <form string="Product Images">
+                <group>
+                    <field name="name"/>
+                    <field name="url"/>
+                </group>
+                <field name="product_ids"/>
+            </form>
+        </field>
+    </record>
+
+        <record id="product_images_action" model="ir.actions.act_window">
+            <field name="name">Product Cloud Images</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.images</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+    <act_window  id="action_list_product_images"  
+        name="Product Cloud images"  
+        res_model="product.images"
+        view_mode="tree,form"  />  
+    <menuitem  id="menu_list_product_images"  
+        name="Product Cloud Images"  
+        action="product_images_action" 
+        parent="sale.prod_config_main"
+        sequence="99" />
+
+    <record id="product_images_form_action" model="ir.actions.act_window">
+        <field name="name">Product Cloud Images</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.images</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to add a new Image.
+          </p>
+        </field>
+    </record>
+
+
+
+</odoo>

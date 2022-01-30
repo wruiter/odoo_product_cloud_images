@@ -14,6 +14,8 @@ this app links many2many cloud images to products
 
 """,
     'data': [
+        'security/ir.model.access.csv',
         'views/product_template.xml',
+        'views/product_images.xml',
     ]
 }

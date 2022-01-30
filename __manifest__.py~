@@ -15,5 +15,6 @@ this app links many2many cloud images to products
 """,
     'data': [
         'views/product_template.xml',
+        'views/product_images.xml',
     ]
 }

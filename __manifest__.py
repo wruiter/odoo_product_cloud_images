@@ -1,17 +1,38 @@
-# Non part of Odoo. See LICENSE file for full copyright and licensing details.
+# -*- coding: utf-8 -*-
+#############################################################################
+#
+#    Neobis ICT Dienstverlening B.V.
+#
+#    Copyright (C) 2021-TODAY Neobis ICT Dienstverlening B.V.(<https://www.neobis.nl>)
+#    Author: Walter Ruiter(<https://www.neobis.nl>)
+#
+#    You can modify it under the terms of the GNU LESSER
+#    GENERAL PUBLIC LICENSE (LGPL v3), Version 3.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU LESSER GENERAL PUBLIC LICENSE (LGPL v3) for more details.
+#
+#    You should have received a copy of the GNU LESSER GENERAL PUBLIC LICENSE
+#    (LGPL v3) along with this program.
+#    If not, see <http://www.gnu.org/licenses/>.
+#
+#############################################################################
+
 {
     'name' : 'Products cloud images',
+    'version': '10.0.0.0.1',
     'category' : 'Sales',
     'depends' : ['sale', 'base'],
     'demo' : [],
-    'author': 'Omega Software Service',
-    'website': 'http://www.Vintage-Electronics.nl',
+    'author': 'Neobis ICT Dienstverlening B.V.',
+    'website': 'http://www.neobis.nl',
     'license': 'AGPL-3',
-
     'description': """
-this app links many2many cloud images to products
-
-
+this app links many2many cloud images to products.
+Under salel/configuration there is a list of all the images each linked to one or more products.
+On the product there is a notebookpage with all the related images.
 """,
     'data': [
         'views/product_template.xml',
